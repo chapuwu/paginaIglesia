@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logoHeader from '../public/img/logo1.png'
-import HeaderButton from './components/headerButton'
+import HeaderButton from './components/HeaderButton'
 import logoBody from '../public/img/logo2.png'
 import BigButton from './components/BigButton'
 
