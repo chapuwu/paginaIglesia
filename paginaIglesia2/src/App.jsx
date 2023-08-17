@@ -16,7 +16,12 @@ function App() {
                         <img src={logoHeader} alt='' className='h-14 p-2' />
                     </a>
                     <div className='flex items-center gap-8'>
-                        <HeaderButton setStatusClick={setStatusClick} buttonText='Iglesia' dropdown />
+                        <HeaderButton
+                            setStatusClick={setStatusClick}
+                            statusClick={statusClick}
+                            buttonText='Iglesia'
+                            dropdown
+                        />
                         <HeaderButton buttonText='Material' dropdown />
                         <HeaderButton buttonText='Niños' dropdown />
                         <HeaderButton buttonText='Centro de desarrollo' dropdown />
@@ -30,7 +35,7 @@ function App() {
                 </div>
                 <h2 className='text-logo text-5xl my-6'>Una Iglesia, muchos lugares</h2>
                 <BigButton className='my-12'>Conocenos</BigButton>
-                <DropMenu statusClick={statusClick} />
+                {statusClick ? <DropMenu /> : ''}
             </main>
         </div>
     )
