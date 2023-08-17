@@ -11,7 +11,7 @@ function App() {
     return (
         <div id='app' className='bg-orange-100 h-screen w-screen scroll-auto'>
             <header className='bg-orange-200 bg-opacity-50 w-full px-4'>
-                <div className='flex justify-between items-center'>
+                <div className='container flex justify-between items-center'>
                     <a href='/'>
                         <img src={logoHeader} alt='' className='h-14 p-2' />
                     </a>
@@ -29,7 +29,7 @@ function App() {
                     </div>
                 </div>
             </header>
-            <main className='flex items-center flex-col'>
+            <main className='container flex items-center flex-col'>
                 <div className='my-6'>
                     <img src={logoBody} alt='' className='h-80' />
                 </div>
