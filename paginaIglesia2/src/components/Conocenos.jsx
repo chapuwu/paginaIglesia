@@ -8,7 +8,7 @@ export default function Conocenos({ conocenosRef }) {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setShow(show || entry.isIntersecting)
+                setShow((show) => show || entry.isIntersecting)
             },
             { rootMargin: '-300px' },
         )
@@ -18,7 +18,7 @@ export default function Conocenos({ conocenosRef }) {
 
     return (
         <div
-            className={`flex flex-col items-center transition-all duration-400 ease-out ${
+            className={`flex flex-col items-center transition-all duration-500 ease-out ${
                 show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             ref={ref}>
@@ -37,7 +37,7 @@ export default function Conocenos({ conocenosRef }) {
                 aceptarían ni rechazarían una información sin haberla analizado y comparado a fin de comprobar su
                 veracidad.
             </p>
-            <p className='text-2xl'>
+            <p className='text-2xl my-6'>
                 Si vos perteneces a este segundo grupo, te invitamos a leer nuestras creencias y a sacar tus propias
                 conclusiones.
             </p>

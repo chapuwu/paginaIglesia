@@ -4,9 +4,12 @@ import logoBody from '../public/img/logo2.png'
 import BigButton from './components/BigButton'
 import Conocenos from './components/Conocenos'
 import { useRef } from 'react'
+import Footer from './components/Footer'
 
 function App() {
     const conocenosRef = useRef()
+
+    // el header convertirlo en un componente gay
 
     return (
         <div id='app' className='bg-orange-100 h-screen w-screen overflow-auto'>
@@ -55,6 +58,7 @@ function App() {
                     <Conocenos conocenosRef={conocenosRef} />
                 </div>
             </main>
+            <Footer></Footer>
         </div>
     )
 }
