@@ -22,7 +22,7 @@ export default function Conocenos({ conocenosRef }) {
                 show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             ref={ref}>
-            <h2 ref={conocenosRef} className='text-4xl text-logo font-logo font-bold'>
+            <h2 ref={conocenosRef} className='text-4xl text-logo font-bold font-sans'>
                 ¡Queremos que nos conozcas!
             </h2>
             <p className='text-2xl my-6'>
