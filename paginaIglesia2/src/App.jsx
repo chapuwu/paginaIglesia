@@ -3,14 +3,14 @@ import BigButton from './components/BigButton'
 import Conocenos from './components/Conocenos'
 import { useRef } from 'react'
 import Footer from './components/Footer'
-import Headerr from './components/Header'
+import Header from './components/Header'
 
 function App() {
     const conocenosRef = useRef()
 
     return (
         <div id='app' className='bg-orange-100 h-screen w-screen overflow-auto'>
-            <Headerr />
+            <Header />
             <main className='flex justify-center w-full'>
                 <div className='container flex items-center flex-col'>
                     <div className='my-6'>

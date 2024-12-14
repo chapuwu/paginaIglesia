@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import BigButton from './BigButton'
+import CreemosEn from './CreemosEn'
 
 export default function Conocenos({ conocenosRef }) {
     const [show, setShow] = useState(false)
@@ -42,6 +43,7 @@ export default function Conocenos({ conocenosRef }) {
                 conclusiones.
             </p>
             <BigButton className='my-12'>Creemos En...</BigButton>
+            <CreemosEn />
         </div>
     )
 }
