@@ -28,7 +28,7 @@ function App() {
         </div>
     ) : (
         <div className='bg-orange-100 h-screen w-screen flex justify-center items-center'>
-            <div className='bg-orange-200 h-1/2 w-1/2 flex flex-col items-center rounded-lg justify-evenly'>
+            <div className='bg-orange-200 md:h-3/4 lg:w-1/2 sm:h-3/5 flex flex-col items-center rounded-lg justify-evenly'>
                 <h1 className='text-logo text-2xl font-bold font-sans'>Atencion, Esta pagina esta en Desarrollo!</h1>
                 <div className='bg-orange-100 w-1/2 flex justify-center h-1/2 items-center'>
                     <p className='text-xl bg-orange-100 w-11/12'>
