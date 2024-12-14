@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
             <div className='container flex justify-between items-center'>
-                <a href='/'>
+                <a href='/paginaIglesia/'>
                     <img src={logoHeader} alt='' className='h-14 p-2' />
                 </a>
                 <div className='flex items-center gap-8'>
