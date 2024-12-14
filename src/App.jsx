@@ -33,8 +33,8 @@ function App() {
                 <div className='bg-orange-100 w-1/2 flex justify-center h-1/2 items-center'>
                     <p className='text-xl bg-orange-100 w-11/12'>
                         <b>Este proyecto esta en desarollo</b> y con el tiempo se va a ir agregando mas cosas y
-                        arreglando errores visuales para dispositivos moviles y con errores visuales, esto es solo una
-                        version incompleta del proyecto, Saludos y Bendiciones
+                        arreglando errores visuales para dispositivos moviles, esto es solo una version incompleta del
+                        proyecto, Saludos y Bendiciones
                     </p>
                 </div>
                 <div className='w-28 h-14 flex justify-center'>
