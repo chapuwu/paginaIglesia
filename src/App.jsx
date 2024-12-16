@@ -11,7 +11,9 @@ function App() {
     const [showMenu, setShowMenu] = useState(false)
     const [iglesiaMenu, setIglesiaMenu] = useState(false)
     const [materialMenu, setMaterialMenu] = useState(false)
-    const [state, setState] = useState()
+    const [nenesMenu, setNenesMenu] = useState(false)
+    const [centroDesarrollo, setCentroDesarrollo] = useState(false)
+    const [contacto, setContacto] = useState(false)
     const conocenosRef = useRef()
 
     return aviso ? (
@@ -22,12 +24,16 @@ function App() {
                     <div className='bg-orange-200 rounded-lg flex flex-col gap-5 p-3 absolute w-1/3 items-center'>
                         <MenuButton texto={'Iglesia'} iglesiaMenu={iglesiaMenu} setIglesiaMenu={setIglesiaMenu} />
                         <MenuButton texto={'Material'} materialMenu={materialMenu} setMaterialMenu={setMaterialMenu} />
-                        <MenuButton texto={'Niños'} />
-                        <MenuButton texto={'Centro de Desarrollo'} />
-                        <MenuButton texto={'Contacto'} />
+                        <MenuButton texto={'Niños'} nenesMenu={nenesMenu} setNenesMenu={setNenesMenu} />
+                        <MenuButton
+                            texto={'Centro de Desarrollo'}
+                            centroDesarrollo={centroDesarrollo}
+                            setCentroDesarrollo={setCentroDesarrollo}
+                        />
+                        <MenuButton texto={'Contacto'} contacto={contacto} setContacto={setContacto} />
                     </div>
                 ) : (
-                    <div></div>
+                    ''
                 )}
                 <div className='container flex items-center flex-col'>
                     <div className='my-6'>
