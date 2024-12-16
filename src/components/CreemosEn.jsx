@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Creencia from './Creencia'
 
-export default function CreemosEn() {
+export default function CreemosEn({ creenciasRef }) {
+    const [show, setShow] = useState(false)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setShow((show) => show || entry.isIntersecting)
+            },
+            { rootMargin: '-300px' },
+        )
+        observer.observe(creenciasRef.current)
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <div className='flex flex-col items-center'>
+        <div
+            className={`flex flex-col items-center mb-16 ${
+                show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
+            }`}
+            ref={creenciasRef}>
             <Creencia
                 titulo={'Creemos en Dios'}
                 informacion={

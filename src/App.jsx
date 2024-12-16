@@ -5,6 +5,7 @@ import Conocenos from './components/Conocenos'
 import { useRef, useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import CreemosEn from './components/CreemosEn'
 
 function App() {
     const [aviso, setAviso] = useState(false)
@@ -15,11 +16,12 @@ function App() {
     const [centroDesarrollo, setCentroDesarrollo] = useState(false)
     const [contacto, setContacto] = useState(false)
     const conocenosRef = useRef()
+    const creenciasRef = useRef()
 
     return aviso ? (
-        <div id='app' className='h-screen w-screen bg-orange-100 overflow-auto'>
+        <div id='app' className='h-screen w-screen scroll-smooth bg-orange-100 overflow-auto'>
             <Header setShowMenu={setShowMenu} showMenu={showMenu} />
-            <main className='flex justify-center w-full'>
+            <main className='flex justify-center w-full min-h-full'>
                 {showMenu ? (
                     <div className='bg-orange-200 rounded-lg flex flex-col gap-5 p-3 absolute w-1/3 items-center'>
                         <MenuButton texto={'Iglesia'} iglesiaMenu={iglesiaMenu} setIglesiaMenu={setIglesiaMenu} />
@@ -44,6 +46,10 @@ function App() {
                         Conocenos
                     </BigButton>
                     <Conocenos conocenosRef={conocenosRef} />
+                    <BigButton className='my-12' scrollTo={creenciasRef}>
+                        Creemos En...
+                    </BigButton>
+                    <CreemosEn creenciasRef={creenciasRef} />
                 </div>
             </main>
             <Footer></Footer>
