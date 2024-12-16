@@ -10,13 +10,7 @@ export default function Header({ buttonText, children, showMenu, showSubMenu, se
     return (
         <div className='relative'>
             <button
-                onClick={() => {
-                    if (showMenu) {
-                        setShowSubMenu(!showSubMenu)
-                    } else {
-                        setHoveringButton(true)
-                    }
-                }}
+                onClick={() => setHoveringButton(true)}
                 onMouseEnter={() => setHoveringButton(true)}
                 onMouseLeave={() => setHoveringButton(false)}
                 className={`${

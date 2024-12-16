@@ -1,6 +1,6 @@
 import logoBody from '../public/img/logo2.png'
 import BigButton from './components/BigButton'
-import HeaderButton from './components/HeaderButton'
+import MenuButton from './components/MenuButton'
 import Conocenos from './components/Conocenos'
 import { useRef, useState } from 'react'
 import Footer from './components/Footer'
@@ -9,7 +9,9 @@ import Header from './components/Header'
 function App() {
     const [aviso, setAviso] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
-    const [showSubMenu, setShowSubMenu] = useState(false)
+    const [iglesiaMenu, setIglesiaMenu] = useState(false)
+    const [materialMenu, setMaterialMenu] = useState(false)
+    const [state, setState] = useState()
     const conocenosRef = useRef()
 
     return aviso ? (
@@ -17,32 +19,12 @@ function App() {
             <Header setShowMenu={setShowMenu} showMenu={showMenu} />
             <main className='flex justify-center w-full'>
                 {showMenu ? (
-                    <div className='bg-orange-200 rounded-lg flex flex-col gap-5 absolute w-1/3 items-center'>
-                        <HeaderButton
-                            buttonText='Iglesia'
-                            showMenu={showMenu}
-                            showSubMenu={showSubMenu}
-                            setShowSubMenu={setShowSubMenu}></HeaderButton>
-                        <HeaderButton
-                            buttonText='Material'
-                            showMenu={showMenu}
-                            showSubMenu={showSubMenu}
-                            setShowSubMenu={setShowSubMenu}></HeaderButton>
-                        <HeaderButton
-                            buttonText='Niños'
-                            showMenu={showMenu}
-                            showSubMenu={showSubMenu}
-                            setShowSubMenu={setShowSubMenu}></HeaderButton>
-                        <HeaderButton
-                            buttonText='Centro de desarrollo'
-                            showMenu={showMenu}
-                            showSubMenu={showSubMenu}
-                            setShowSubMenu={setShowSubMenu}></HeaderButton>
-                        <HeaderButton
-                            buttonText='Contacto'
-                            showMenu={showMenu}
-                            showSubMenu={showSubMenu}
-                            setShowSubMenu={setShowSubMenu}></HeaderButton>
+                    <div className='bg-orange-200 rounded-lg flex flex-col gap-5 p-3 absolute w-1/3 items-center'>
+                        <MenuButton texto={'Iglesia'} iglesiaMenu={iglesiaMenu} setIglesiaMenu={setIglesiaMenu} />
+                        <MenuButton texto={'Material'} materialMenu={materialMenu} setMaterialMenu={setMaterialMenu} />
+                        <MenuButton texto={'Niños'} />
+                        <MenuButton texto={'Centro de Desarrollo'} />
+                        <MenuButton texto={'Contacto'} />
                     </div>
                 ) : (
                     <div></div>
