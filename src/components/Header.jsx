@@ -1,9 +1,33 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import logoHeader from '../../public/img/logo1.png'
 import HeaderButton from './HeaderButton'
 
-export default function Header() {
-    return (
+export default function Header({ showMenu, setShowMenu }) {
+    const [smallScreen, setSmallScreen] = useState(false)
+
+    useEffect(() => {
+        const checkScrenSize = () => {
+            setSmallScreen(window.innerWidth >= 640 && window.innerWidth < 768)
+        }
+        checkScrenSize()
+    }, [])
+
+    return smallScreen ? (
+        <header className='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
+            <div className='container flex justify-between items-center'>
+                <a href='/paginaIglesia/'>
+                    <img src={logoHeader} alt='' className='h-14 p-2' />
+                </a>
+                <div className='w-20 flex justify-center h-2/3'>
+                    <button
+                        className='w-full h-full bg-orange-200 text-logo text-xl hover:bg-orange-300 transition-all rounded-lg'
+                        onClick={() => setShowMenu(!showMenu)}>
+                        Menu
+                    </button>
+                </div>
+            </div>
+        </header>
+    ) : (
         <header className='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
             <div className='container flex justify-between items-center'>
                 <a href='/paginaIglesia/'>

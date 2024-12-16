@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Header({ buttonText, children }) {
+export default function Header({ buttonText, children, showMenu, showSubMenu, setShowSubMenu }) {
     const [hoveringButton, setHoveringButton] = useState(false)
     const [hoveringDropdown, setHoveringDropdown] = useState(false)
 
@@ -10,10 +10,18 @@ export default function Header({ buttonText, children }) {
     return (
         <div className='relative'>
             <button
-                onClick={() => setHoveringButton(true)}
+                onClick={() => {
+                    if (showMenu) {
+                        setShowSubMenu(!showSubMenu)
+                    } else {
+                        setHoveringButton(true)
+                    }
+                }}
                 onMouseEnter={() => setHoveringButton(true)}
                 onMouseLeave={() => setHoveringButton(false)}
-                className={`text-xl text-logo transition-colors duration-200 hover:text-orange-300 ${
+                className={`${
+                    showMenu ? 'text-2xl' : 'text-xl'
+                } text-logo transition-colors duration-200 hover:text-orange-300 ${
                     children ? 'cursor-pointer' : 'cursor-default'
                 }`}>
                 {buttonText}
