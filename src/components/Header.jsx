@@ -7,7 +7,10 @@ export default function Header({ showMenu, setShowMenu }) {
 
     useEffect(() => {
         const checkScrenSize = () => {
-            setSmallScreen(window.innerWidth >= 640 && window.innerWidth < 768)
+            setSmallScreen(
+                (window.innerWidth >= 640 && window.innerWidth < 768) ||
+                    (window.innerWidth >= 1024 && window.innerWidth < 1280),
+            )
         }
         checkScrenSize()
     }, [])
