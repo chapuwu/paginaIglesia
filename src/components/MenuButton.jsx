@@ -1,5 +1,6 @@
 import React from 'react'
 import SubMenuButton from './SubMenuButton'
+import arrowBack from '../../public/img/arrowBack.png'
 
 export default function MenuButton({
     texto,
@@ -42,11 +43,7 @@ export default function MenuButton({
             </button>
             {iglesiaMenu ? (
                 <div className='bg-orange-200 absolute right-1 top-1 flex flex-col h-50 gap-6 p-3 w-full rounded-lg'>
-                    <img
-                        src='../../public/img/arrowBack.png'
-                        className='h-11 w-11 cursor-pointer'
-                        onClick={() => setIglesiaMenu(false)}
-                    />
+                    <img src={arrowBack} className='h-11 w-11 cursor-pointer' onClick={() => setIglesiaMenu(false)} />
                     <SubMenuButton subButtonText={'Creemos en...'} />
                     <SubMenuButton subButtonText={'Ubicaciones'} />
                     <SubMenuButton subButtonText={'Agenda'} />
@@ -59,11 +56,7 @@ export default function MenuButton({
             )}
             {materialMenu ? (
                 <div className='bg-orange-200 absolute right-1 top-1 flex flex-col h-50 gap-6 p-3 w-full h-full rounded-lg'>
-                    <img
-                        src='../../public/img/arrowBack.png'
-                        className='h-11 w-11 cursor-pointer'
-                        onClick={() => setMaterialMenu(false)}
-                    />
+                    <img src={arrowBack} className='h-11 w-11 cursor-pointer' onClick={() => setMaterialMenu(false)} />
                     <SubMenuButton subButtonText={'Estudios Inductivos'} />
                     <SubMenuButton subButtonText={'Discipulado'} />
                     <SubMenuButton subButtonText={'Otros Escritos'} />
@@ -74,11 +67,7 @@ export default function MenuButton({
             )}
             {nenesMenu ? (
                 <div className='bg-orange-200 absolute right-1 top-1 flex flex-col h-50 gap-6 p-3 w-full h-full rounded-lg'>
-                    <img
-                        src='../../public/img/arrowBack.png'
-                        className='h-11 w-11 cursor-pointer'
-                        onClick={() => setNenesMenu(false)}
-                    />
+                    <img src={arrowBack} className='h-11 w-11 cursor-pointer' onClick={() => setNenesMenu(false)} />
                     <SubMenuButton subButtonText={'Trabajo'} />
                     <SubMenuButton subButtonText={'Material'} />
                 </div>
@@ -88,7 +77,7 @@ export default function MenuButton({
             {centroDesarrollo ? (
                 <div className='bg-orange-200 absolute right-1 top-1 flex flex-col h-50 gap-6 p-3 w-full h-full rounded-lg'>
                     <img
-                        src='../../public/img/arrowBack.png'
+                        src={arrowBack}
                         className='h-11 w-11 cursor-pointer'
                         onClick={() => setCentroDesarrollo(false)}
                     />

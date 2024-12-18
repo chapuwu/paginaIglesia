@@ -31,7 +31,7 @@ export default function Header({ showMenu, setShowMenu }) {
         <header className='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
             <div className='container flex justify-between items-center'>
                 <a href='/paginaIglesia/'>
-                    <img src={logoHeader} alt='' className='h-14 p-2' />
+                    <img src={logoHeader} className='h-14 p-2' />
                 </a>
                 <div className='flex items-center gap-8'>
                     <HeaderButton buttonText='Iglesia'>

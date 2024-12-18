@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Creencia from './Creencia'
+import Bautismo from './Bautismo'
+import SantaCena from './SantaCena'
 
 export default function CreemosEn({ creenciasRef }) {
     const [show, setShow] = useState(false)
@@ -39,6 +41,7 @@ export default function CreemosEn({ creenciasRef }) {
                     'Que tiene la misión de convencernos de nuestras faltas, infundir el deseo de cambiar de actitud, producir una vida nueva; de consolarnos en nuestras tribulaciones, ayudarnos en la oración, crear sentimientos de amor, gozo, paz, paciencia, bondad, fe, humildad y dominio propio y de capacitamos para servir a Dios. Creemos que cuando una persona se convierte a Dios, es sellada por el Espíritu Santo como propiedad divina y, el mismo Espíritu le da la seguridad de que es un hijo de Dios.'
                 }
             />
+            <Bautismo />
         </div>
     )
 }
