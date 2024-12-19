@@ -4,11 +4,9 @@ export default function SubMenuButton({ subButtonText }) {
     return (
         <div>
             <div className='flex flex-col h-full'>
-                <span
-                    onClick={() => console.log(subButtonText)}
-                    className='text-logo text-2xl font-sans text-center cursor-pointer'>
+                <a href='#' className='text-logo text-2xl font-sans text-center'>
                     {subButtonText}
-                </span>
+                </a>
             </div>
         </div>
     )

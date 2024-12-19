@@ -23,7 +23,7 @@ function App() {
             <Header setShowMenu={setShowMenu} showMenu={showMenu} />
             <main className='flex justify-center w-full min-h-full'>
                 {showMenu ? (
-                    <div className='bg-orange-200 rounded-lg flex flex-col gap-5 p-3 absolute w-1/3 items-center'>
+                    <div className='bg-orange-200 rounded-lg flex flex-col gap-8 p-3 absolute z-20 w-1/2 items-center'>
                         <MenuButton texto={'Iglesia'} iglesiaMenu={iglesiaMenu} setIglesiaMenu={setIglesiaMenu} />
                         <MenuButton texto={'Material'} materialMenu={materialMenu} setMaterialMenu={setMaterialMenu} />
                         <MenuButton texto={'Niños'} nenesMenu={nenesMenu} setNenesMenu={setNenesMenu} />
@@ -69,7 +69,7 @@ function App() {
                 </div>
                 <div className='w-28 h-14 flex justify-center'>
                     <button
-                        className='text-white font-sans xl:text-xl text-lg h-full w-full bg-logo hover:bg-red-600 transition-all'
+                        className='text-white font-sans xl:text-xl rounded-lg text-lg h-full w-full bg-logo hover:bg-red-600 transition-all'
                         onClick={() => setAviso(true)}>
                         Aceptar
                     </button>
