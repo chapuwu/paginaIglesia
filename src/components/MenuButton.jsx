@@ -1,6 +1,6 @@
 import React from 'react'
 import SubMenuButton from './SubMenuButton'
-import arrowBack from '../../public/img/arrowBack.png'
+import arrowBack from '../img/arrowBack.png'
 
 export default function MenuButton({
     texto,

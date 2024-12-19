@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logoHeader from '../../public/img/logo1.png'
+import logoHeader from '../img/logo1.png'
 import HeaderButton from './HeaderButton'
 
 export default function Header({ showMenu, setShowMenu }) {

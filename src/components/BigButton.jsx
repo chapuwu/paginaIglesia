@@ -11,7 +11,7 @@ export default function BigButton({ children, scrollTo, className }) {
     return (
         <button
             onClick={handleButtonClick}
-            className={`text-3xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 ${className}`}
+            className={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 ${className}`}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}>
             <span className='z-10 relative'>{children}</span>
