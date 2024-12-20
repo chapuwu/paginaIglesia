@@ -42,6 +42,7 @@ export default function CreemosEn({ creenciasRef }) {
                 }
             />
             <Bautismo />
+            <SantaCena />
         </div>
     )
 }
