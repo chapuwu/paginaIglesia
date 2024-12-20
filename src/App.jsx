@@ -23,7 +23,7 @@ function App() {
             <Header setShowMenu={setShowMenu} showMenu={showMenu} />
             <main className='flex justify-center w-full min-h-full'>
                 {showMenu ? (
-                    <div className='bg-orange-200 rounded-lg flex flex-col gap-8 p-3 absolute z-20 w-1/2 items-center'>
+                    <div className='bg-orange-200 rounded-lg flex flex-col gap-8 p-3 fixed z-20 w-1/2 items-center'>
                         <MenuButton texto={'Iglesia'} iglesiaMenu={iglesiaMenu} setIglesiaMenu={setIglesiaMenu} />
                         <MenuButton texto={'Material'} materialMenu={materialMenu} setMaterialMenu={setMaterialMenu} />
                         <MenuButton texto={'Niños'} nenesMenu={nenesMenu} setNenesMenu={setNenesMenu} />
