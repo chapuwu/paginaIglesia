@@ -6,7 +6,6 @@ import { useRef, useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import CreemosEn from './components/CreemosEn'
-import { useNavigate } from 'react-router-dom'
 
 function App() {
     const [aviso, setAviso] = useState(false)
@@ -18,7 +17,6 @@ function App() {
     const [contacto, setContacto] = useState(false)
     const conocenosRef = useRef()
     const creenciasRef = useRef()
-    const navigate = useNavigate()
 
     return aviso ? (
         <div id='app' className='h-screen w-screen scroll-smooth bg-orange-100 overflow-auto'>
